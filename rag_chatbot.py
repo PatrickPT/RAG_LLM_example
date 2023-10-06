@@ -6,8 +6,8 @@ from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="Chatbot", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
-st.title("llama_index owledge Bot")
-st.info("This bot knows everything about llama_index which is mentioned in https://github.com/run-llama/llama_index", icon="📃")
+st.title("llama_index Knowledge Bot")
+st.info("This bot knows everything about llama_index which is mentioned in https://github.com/run-llama/llama_index/tree/main/docs", icon="📃")
          
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [

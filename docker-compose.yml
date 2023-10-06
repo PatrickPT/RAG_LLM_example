@@ -3,7 +3,7 @@ version: "3"
 services:
   rag_example:
     container_name: rag_example
-    restart: never
+    restart: no
     ports:
       - 8501:8501
     volumes:
