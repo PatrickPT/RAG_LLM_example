@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+#ENV PATH=“${PATH}:/root/.local/bin”
+
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
@@ -14,4 +16,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8501
 
 # Define the command to run your Streamlit app
-CMD ["streamlit", "run", "streamlit_chatbot.py"]
+CMD ["streamlit", "run", "rag_chatbot.py"]
