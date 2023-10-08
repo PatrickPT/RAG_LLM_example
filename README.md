@@ -29,7 +29,7 @@ To run the Knowledge Bot locally with docker, follow these steps:
    nano .streamlit/secrets.toml
    # Insert your API Key as openai_key = "API Key" and save
 
-3. Create your documents
+3. Create your documents or change the input_dir parameter in config.yaml to your folder(which needs to be accessible from the docker container)
 
    ```bash
    mkdir data
