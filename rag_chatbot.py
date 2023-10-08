@@ -11,6 +11,7 @@ with open("config.yaml", "r") as yamlfile:
 # import configuration from yaml
 name = config[0]['config']['name']
 info = config[0]['config']['info']
+input_dir = config[0]['config']['input_dir']
 system_prompt = config[0]['config']['system_prompt']
 api = config[0]['config']['api']
 
@@ -34,7 +35,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
 @st.cache_resource(show_spinner=False) # data is cached in memory so limit the knowledge base according to your machine
 def load_data():
     with st.spinner(text="Loading and indexing the provided data"):
-        reader = SimpleDirectoryReader(input_dir="./data", recursive=True) # read recursively all directories 
+        reader = SimpleDirectoryReader(input_dir=input_dir, recursive=True) # read recursively all directories 
         docs = reader.load_data() # load data and create docs
         service_context = ServiceContext.from_defaults(llm=OpenAI(model=api, temperature=0.5, system_prompt=system_prompt))# add a permanent service prompt which is added
         index = VectorStoreIndex.from_documents(docs, service_context=service_context) # create your vector database
