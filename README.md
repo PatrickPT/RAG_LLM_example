@@ -35,7 +35,9 @@ To run the Knowledge Bot locally with docker, follow these steps:
    mkdir data
    # Insert the contextual documents the LLM should use in that folder
 
-4. Run docker compose
+4. Change the config.yaml file accordingly to your prior changes
+
+5. Run docker compose
 
    ```bash
    docker compose up -d
