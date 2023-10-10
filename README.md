@@ -1,3 +1,5 @@
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
 # Knowledge Bot with Retrieval Augmented Generation
 
 ## Overview
@@ -25,23 +27,24 @@ To run the Knowledge Bot locally with docker, follow these steps:
 
    ```bash
    cd RAG_LLM_example
-   mkdir .streamlit
+   cd .streamlit
    nano .streamlit/secrets.toml
    # Insert your API Key as openai_key = "API Key" and save
 
 3. Create your documents or change the input_dir parameter in config.yaml to your folder(which needs to be accessible from the docker container)
 
    ```bash
-   mkdir data
+   cd data
    # Insert the contextual documents the LLM should use in that folder
 
-4. Change the config.yaml file accordingly to your prior changes
+4. Change the `config.yaml` file accordingly to your prior changes
 
 5. Run docker compose
 
    ```bash
    docker compose up -d
 
+PS: content in `/.streamlit` and `/data` is ignored by git.
 
 ## Contributing
 
@@ -49,7 +52,7 @@ Contributions are welcome! If you'd like to contribute to this project, feel fre
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 
